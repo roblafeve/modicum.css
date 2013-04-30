@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>row</title>
+	<link rel="stylesheet" href="stylesheets/modicum.css">
+	<style>
+
+		body {
+		  background: white;
+		}
+
+		.filler {
+		  height: 300px;
+		}
+
+		[column] {
+		  background: rgba(0, 0, 0, 0.1);
+		  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+		  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+		  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+		  min-height: 300px;
+		  border: 1px solid gray\9;
+		}
+
+		header {
+			text-align: center;
+		}
+
+		h1 {
+			margin-bottom: 0;
+		}
+
+		.sub-head {
+			margin-top: 0;
+			font-style: italic;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<header row>
+		<div column>
+			<h1>modicum.css</h1>
+			<p class='sub-head'>a tiny css layout framework</p>
+		</div>
+	</header>
+
+	<div row>
+		<div column></div>
+		<div column></div>
+		<div column>
+			<div row>
+				<div column></div>
+				<div column>
+					<div row>
+						<div column><div class="filler"></div></div>
+						<div column></div>
+					</div>
+				</div>
+				<div column></div>
+			</div>
+		</div>
+	</div>
+
+	<div row>
+		<div column></div>
+		<div column>
+			<div row>
+				<div column><div class="filler"></div></div>
+				<div column></div>
+				<div column></div>
+				<div column></div>
+			</div>
+			<div row>
+				<div column>
+					<div row>
+						<div column><div class="filler"></div></div>
+						<div column></div>
+					</div>
+				</div>
+				<div column></div>
+			</div>
+		</div>
+	</div>
+
+	<div row>
+		<div column>
+			<div row>
+				<div column></div>
+				<div column>
+					<div row>
+						<div column><div class="filler"></div></div>
+						<div column></div>
+						<div column></div>
+					</div>
+				</div>
+				<div column></div>
+			</div>
+		</div>
+		<div column></div>
+	</div>
+
+	<div row>
+		<div column></div>
+		<div column></div>
+		<div column></div>
+		<div column>
+			<div row>
+				<div column><div class="filler"></div></div>
+				<div column></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+[row] {
+  display: table;
+  table-layout: fixed;
+  border-spacing: 1em;
+  width: 100%; }
+  [row] + [row] {
+    margin-top: -1em; }
+  @media (max-width: 1024px) {
+    [row] > [column] {
+      display: block; } }
+
+[column] {
+  display: table-cell;
+  vertical-align: top;
+  margin-top: 1em; }
+  [column]:first-child {
+    margin-top: 0; }
+  [column] [grid] {
+    border-spacing: 0.5em; }

@@ -13,27 +13,10 @@
 [row] {
 	display: table;
 	table-layout: fixed;
-	border-spacing: 1em;
 	width: 100%;
-	& + [row] {
-		margin-top: -1em;
-	}
-	& > [column] {
-		@media (max-width: 1024px) {
-			display: block;
-		}
-	}
 }
 
 [column] {
 	display: table-cell;
 	vertical-align: top;
-	margin-top: 1em;
-	&:first-child {
-		margin-top: 0;
-	}
-	
-	[grid] {
-		border-spacing: 0.5em;	
-	}
 }

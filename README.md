@@ -1,4 +1,4 @@
 modicum.css
 ===========
 
-A tiny css layout framework
+A tweetable CSS layout framework.

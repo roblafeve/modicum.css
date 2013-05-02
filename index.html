@@ -2,62 +2,79 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>modicum.css</title>
 	<link rel="stylesheet" href="stylesheets/modicum.css">
-	<style>
-
-		body {
-		  background: white;
-		}
-
-		.filler {
-		  height: 300px;
-		}
-
-		[column] {
-		  background: rgba(0, 0, 0, 0.1);
-		  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-		  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-		  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-		  min-height: 300px;
-		  border: 1px solid gray\9;
-		}
-
-		header {
-			text-align: center;
-		}
-
-		header [column] {
-			vertical-align: center;
-			/*min-height: 0;*/
-		}
-
-		h1 {
-			margin-bottom: 0;
-		}
-
-		.sub-head {
-			margin-top: 0;
-			font-style: italic;
-		}
-		
-	</style>
+	<link rel="stylesheet" href="stylesheets/for-display-only.css">
 </head>
 <body>
 
-	<header row>
-		<div column>
-			<h1>modicum.css</h1>
-			<p class='sub-head'>a tiny css layout framework</p>
+	<div row>
+		<div column='padded'>
+			<header>
+				<h1>modicum.css</h1>
+				<p class='sub-head'>a tweetable CSS framework</p>
+			</header>
 		</div>
-	</header>
+	</div>
+
+	<div row>
+		<div column='padded'>
+			<section>
+				<h2>Modicum is an amazingly terse & reliable CSS layout system.</h2>
+				<h3>How it works.</h3>
+				<p>Modicum.css uses 'display: table' and 'display: table-cell' to mimic what tables have done from the start— automatic column widths <em>(...settle down, we're only letting the browser apply similar layout rules. There is no effect on an element's semantic value.)</em> This means that you simply create a new column and move on. No percentage discrepancies between browsers. No clearing floats. Matching height columns defined by content <em>(yay!)</em></p>
+				<h3>Application.</h3>
+				<p>With Modicum, rows and columns can be infinitely nested within each other <em>(it's not prctical— but go ahead and give it a try.)</em> Because of this, Modicum is useful for layouts and modules alike. An entire web app could be defined using 97 characters, or 98B of css. I like the sound of that!</p>
+				<h3>Fully responsive.</h3>
+				<p>Responsive layouts? Yep, just switch any/all column elements to 'display: block' at the desired breakpoint.</p>
+			</section>
+		</div>
+		<div column='padded'>
+			<section class='example'>
+				<h2>Code example:</h2>
+				<textarea><div row>
+  <div column></div>
+  <div column>
+    <div row>
+      <div column></div>
+    </div>
+  </div>
+</div></textarea>
+				<p>
+					[row] {<br>
+						&emsp;display: table;<br>
+						&emsp;table-layout: fixed;<br>
+						&emsp;border-collapse: collapse;<br>
+						&emsp;width: 100%;<br>
+					}<br><br>
+
+					[column] {<br>
+						&emsp;display: table-cell;<br>
+						&emsp;vertical-align: top;<br>
+					}
+				</p>
+			</section>
+		</div>
+		<div column></div>
+	</div>
 
 	<div row>
 		<div column></div>
-		<div column></div>
 		<div column>
 			<div row>
+				<div column='padded'>
+					<section>
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, quae blanditiis consequuntur deleniti ullam autem temporibus consectetur impedit cupiditate mollitia! Nemo, vitae voluptatem pariatur fuga similique voluptate consequuntur eum impedit.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ullam minus nemo deleniti quas ad inventore? Reiciendis, veniam, quam, aut, ullam ratione delectus voluptates itaque hic dignissimos nisi quasi natus!</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, reprehenderit, sint expedita ex a magni ipsum nulla excepturi hic mollitia aliquid quod. Neque, iusto sit deleniti inventore eligendi nesciunt placeat!</p>
+					</section>
+				</div>
 				<div column></div>
+			</div>
+			<div row>
 				<div column>
 					<div row>
 						<div column><div class="filler"></div></div>
@@ -70,27 +87,6 @@
 	</div>
 
 	<div row>
-		<div column></div>
-		<div column>
-			<div row>
-				<div column><div class="filler"></div></div>
-				<div column></div>
-				<div column></div>
-				<div column></div>
-			</div>
-			<div row>
-				<div column>
-					<div row>
-						<div column><div class="filler"></div></div>
-						<div column></div>
-					</div>
-				</div>
-				<div column></div>
-			</div>
-		</div>
-	</div>
-
-	<div row>
 		<div column>
 			<div row>
 				<div column></div>
@@ -113,7 +109,12 @@
 		<div column></div>
 		<div column>
 			<div row>
-				<div column><div class="filler"></div></div>
+				<div column>
+					<div row>
+						<div column><div class="filler"></div></div>
+						<div column></div>
+					</div>
+				</div>
 				<div column></div>
 			</div>
 		</div>

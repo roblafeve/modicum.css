@@ -20,19 +20,16 @@ body {
 	margin: 0 !important;
 }
 
-[column] {
+[col] {
 	background: rgba(white, 0.33);
 	outline: 1px solid $color-dark;
-	@media (max-width: 1024px) {
+	@media (max-width: 767px) {
 		display: block;
 	}
 	*:first-child {
 		margin: 0;
 	}
-	* + * {
-		margin: 1.5em 0 0;
-	}
-	&[column~='padded'] {
+	&[col~='padded'] {
 		> * {
 			padding: 1.75em;
 		}

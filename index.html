@@ -10,8 +10,8 @@
 </head>
 <body>
 
-	<div row>
-		<div column='padded'>
+	<div grid>
+		<div col='padded'>
 			<header>
 				<h1>modicum.css</h1>
 				<p class='sub-head'>a tweetable CSS framework</p>
@@ -19,52 +19,61 @@
 		</div>
 	</div>
 
-	<div row>
-		<div column='padded'>
+	<div grid>
+		<div col='padded'>
 			<section>
-				<h2>Modicum is an amazingly terse & reliable CSS layout system.</h2>
-				<h3>How it works.</h3>
-				<p>Modicum.css uses 'display: table' and 'display: table-cell' to mimic what tables have done from the start— automatic column widths <em>(...settle down, we're only letting the browser apply similar layout rules. There is no effect on an element's semantic value.)</em> This means that you simply create a new column and move on. No percentage discrepancies between browsers. No clearing floats. Matching height columns defined by content <em>(yay!)</em></p>
-				<h3>Application.</h3>
-				<p>With Modicum, rows and columns can be infinitely nested within each other <em>(it's not prctical— but go ahead and give it a try.)</em> Because of this, Modicum is useful for layouts and modules alike. An entire web app could be defined using 97 characters, or 98B of css. I like the sound of that!</p>
-				<h3>Fully responsive.</h3>
+				<h2>Modicum is an amazingly terse & reliable CSS layout framework.</h2>
+				<h3>How it works</h3>
+				<p>Modicum.css uses 'display: table' and 'display: table-cell' to mimic what tables have done from the start— automatic column widths <em>(...settle down, we're only letting the browser apply similar layout rules. There is no effect on an element's semantic value.)</em> This means that you simply create a new column and move on. No percentage discrepancies between browsers. No clearing floats. Matching height columns defined by content <em>(yay)!</em></p>
+				<h3>Application</h3>
+				<p>With Modicum, grids and columns can be infinitely nested within each other <em>(it's not practical— but go ahead and give it a try.)</em> Because of this, Modicum is useful for layouts and modules alike. An entire web app could be defined using 96 characters, or 95B of css. I like the sound of that!</p>
+				<h3>Responsive</h3>
 				<p>Responsive layouts? Yep, just switch any/all column elements to 'display: block' at the desired breakpoint.</p>
 			</section>
 		</div>
-		<div column='padded'>
-			<section class='example'>
+		<div col='padded'>
+			<section>
 				<h2>Code example:</h2>
-				<textarea><div row>
-  <div column></div>
-  <div column>
-    <div row>
-      <div column></div>
+				<p>
+				<code>
+				<textarea><div grid>
+  <div col></div>
+  <div col>
+    <div grid>
+      <div col></div>
     </div>
   </div>
 </div></textarea>
-				<p>
-					[row] {<br>
+				</code>
+				</p>
+				<code>
+					[grid] {<br>
 						&emsp;display: table;<br>
 						&emsp;table-layout: fixed;<br>
 						&emsp;border-collapse: collapse;<br>
 						&emsp;width: 100%;<br>
 					}<br><br>
 
-					[column] {<br>
+					[col] {<br>
 						&emsp;display: table-cell;<br>
 						&emsp;vertical-align: top;<br>
 					}
-				</p>
+				</code>
 			</section>
 		</div>
-		<div column></div>
+		<div col></div>
 	</div>
 
-	<div row>
-		<div column></div>
-		<div column>
-			<div row>
-				<div column='padded'>
+	<div grid>
+		<div col>
+			<div grid>
+				<div col></div>
+				<div col></div>
+			</div>
+		</div>
+		<div col>
+			<div grid>
+				<div col='padded'>
 					<section>
 						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, quae blanditiis consequuntur deleniti ullam autem temporibus consectetur impedit cupiditate mollitia! Nemo, vitae voluptatem pariatur fuga similique voluptate consequuntur eum impedit.</p>
@@ -72,50 +81,50 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, reprehenderit, sint expedita ex a magni ipsum nulla excepturi hic mollitia aliquid quod. Neque, iusto sit deleniti inventore eligendi nesciunt placeat!</p>
 					</section>
 				</div>
-				<div column></div>
+				<div col></div>
 			</div>
-			<div row>
-				<div column>
-					<div row>
-						<div column><div class="filler"></div></div>
-						<div column></div>
+			<div grid>
+				<div col>
+					<div grid>
+						<div col><div class="filler"></div></div>
+						<div col></div>
 					</div>
 				</div>
-				<div column></div>
+				<div col></div>
 			</div>
 		</div>
 	</div>
 
-	<div row>
-		<div column>
-			<div row>
-				<div column></div>
-				<div column>
-					<div row>
-						<div column><div class="filler"></div></div>
-						<div column></div>
-						<div column></div>
+	<div grid>
+		<div col>
+			<div grid>
+				<div col></div>
+				<div col>
+					<div grid>
+						<div col><div class="filler"></div></div>
+						<div col></div>
+						<div col></div>
 					</div>
 				</div>
-				<div column></div>
+				<div col></div>
 			</div>
 		</div>
-		<div column></div>
+		<div col></div>
 	</div>
 
-	<div row>
-		<div column></div>
-		<div column></div>
-		<div column></div>
-		<div column>
-			<div row>
-				<div column>
-					<div row>
-						<div column><div class="filler"></div></div>
-						<div column></div>
+	<div grid>
+		<div col></div>
+		<div col></div>
+		<div col></div>
+		<div col>
+			<div grid>
+				<div col>
+					<div grid>
+						<div col><div class="filler"></div></div>
+						<div col></div>
 					</div>
 				</div>
-				<div column></div>
+				<div col></div>
 			</div>
 		</div>
 	</div>

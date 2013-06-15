@@ -10,13 +10,13 @@
 // 	</div>
 // </div>
 
-[row] {
+[grid] {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 }
 
-[column] {
+[col] {
 	display: table-cell;
 	vertical-align: top;
 }

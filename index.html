@@ -6,19 +6,58 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>modicum.css</title>
 	<link rel="stylesheet" href="stylesheets/modicum.css">
-	<link rel="stylesheet" href="stylesheets/for-display-only.css">
+	<link rel="stylesheet" href="stylesheets/styles.css">
 </head>
 <body>
 
-	<div grid>
-		<div col='padded'>
-			<header>
-				<h1>modicum.css</h1>
-				<p class='sub-head'>a tweetable CSS framework</p>
-			</header>
+	<header grid layout='header'>
+		<div col header_left>
+			<div header_title>
+				<h1 class='title'>modicum</h1>
+				<p class='subtitle'>a tweetable CSS grid</p>
+			</div>
 		</div>
-	</div>
+		<figure col header_right>
 
+			<div logo_size>
+				<div logo_position>
+					
+					<!-- LOGO -->
+
+					<div module='logo' grid>
+
+						<!-- LOGO - LEFT COLUMN -->
+
+						<!-- <div logo_left col></div> -->
+
+						<!-- LOGO - RIGHT COLUNN -->
+
+						<div logo_right col>
+							<!-- <div grid logo_right-top>
+								<div col></div>
+							</div> -->
+							<div grid logo_right-middle>
+								<div col logo_mid-left></div>
+								<div col logo_mid-right></div>
+							</div>
+							<div grid logo_right-bottom>
+								<div col logo_bottom-left></div>
+								<div col logo_bottom-center></div>
+								<div col logo_bottom-right></div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- END LOGO -->
+
+				</div>
+			</div>
+
+		</figure>
+	</header>
+
+<!-- 
 	<div grid>
 		<div col='padded'>
 			<section>
@@ -73,14 +112,6 @@
 		</div>
 		<div col>
 			<div grid>
-				<div col='padded'>
-					<section>
-						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, quae blanditiis consequuntur deleniti ullam autem temporibus consectetur impedit cupiditate mollitia! Nemo, vitae voluptatem pariatur fuga similique voluptate consequuntur eum impedit.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ullam minus nemo deleniti quas ad inventore? Reiciendis, veniam, quam, aut, ullam ratione delectus voluptates itaque hic dignissimos nisi quasi natus!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, reprehenderit, sint expedita ex a magni ipsum nulla excepturi hic mollitia aliquid quod. Neque, iusto sit deleniti inventore eligendi nesciunt placeat!</p>
-					</section>
-				</div>
 				<div col></div>
 			</div>
 			<div grid>
@@ -128,6 +159,6 @@
 			</div>
 		</div>
 	</div>
-
+ -->
 </body>
 </html>

@@ -1,0 +1,137 @@
+@import 'compass/css3';
+@import 'fonts';
+
+$color: #57F99A;
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	font: 100%/1.5 'OpenSansLight';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: 1.5em solid whitesmoke;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0.2em;
+}
+
+.title, .subtitle {
+	margin: 0;
+}
+
+.subtitle {
+	font-size: 0.75em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+// Misc
+
+[row] {
+	display: table-row;
+}
+
+%border {
+	border: 0.2em solid white;
+}
+
+// Header
+
+[layout='header'] {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	> [col] {
+		vertical-align: middle;
+	}
+}
+	[header_left] {
+		text-align: right;
+	}
+		[header_title] {
+			display: inline-block;
+			text-align: center;
+		}
+	[header_right] {
+		padding-left: 10%;
+	}
+
+// LOGO
+
+[logo_size] {
+	position: relative;
+	width: 50%;
+	padding-top: 50%;
+}
+
+[logo_position] {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+[module='logo'] {
+	width: 100%;
+	height: 100%;
+	@extend %border;
+	@include transform3d(perspective( 600px ) rotateY(20deg) rotateX(10deg));
+	[col] [col] {
+		@include transition(all 0.5s ease-in-out);
+		&:hover {
+			@include transform3d(rotateY(180deg));
+		}
+	}
+}
+
+	[logo_left] { 
+		background: $color;
+		@extend %border;
+	}
+
+	[logo_right] {
+		height: 100%;
+	}
+		[logo_right-top] {
+			height: 50%;
+			[col] {
+				background: adjust-hue($color, 50);
+				@extend %border;
+			} 
+		}
+
+		[logo_right-middle] {
+			height: 40%;
+		}
+			[logo_mid-left] { 
+				background: adjust-hue($color, 100);
+				@extend %border;
+			}
+			[logo_mid-right] {
+				background: adjust-hue($color, 150);
+				@extend %border;
+			}
+
+		[logo_right-bottom] {
+			height: 61%;
+		}
+			[logo_bottom-left] { 
+				background: adjust-hue($color, 200);
+				@extend %border;
+			}
+			[logo_bottom-center] {
+				background: adjust-hue($color, 250);
+				@extend %border;
+			}
+			[logo_bottom-right] {
+				background: adjust-hue($color, 300);
+				@extend %border;
+			}
